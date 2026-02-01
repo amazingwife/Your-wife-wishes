@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Request for Abi</title>
+    <title>Special Request for Ubi</title>
     <style>
         body {
             display: flex;
@@ -11,36 +11,63 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f3e5f5; /* Warna ungu muda ala Kuromi */
+            background-color: #f3e5f5; /* Ungu muda Kuromi */
             font-family: 'Arial', sans-serif;
             overflow: hidden;
             text-align: center;
+            padding: 20px;
         }
-        h1 { color: #6a1b9a; margin-bottom: 30px; } /* Warna ungu gelap */
-        .buttons { position: relative; width: 300px; height: 100px; margin: 0 auto; }
+        h1 { color: #6a1b9a; margin-bottom: 30px; line-height: 1.4; }
+        .buttons { position: relative; width: 100%; max-width: 300px; height: 100px; margin: 0 auto; }
         button {
             padding: 15px 30px;
             font-size: 18px;
-            border-radius: 10px;
+            border-radius: 15px;
             border: none;
             cursor: pointer;
             position: absolute;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        #yesBtn { background-color: #9c27b0; color: white; left: 0; }
-        #noBtn { background-color: #888; color: white; right: 0; transition: 0.2s; }
-        .success-msg { display: none; color: #6a1b9a; font-size: 24px; font-weight: bold; }
-        .kurumi-gif { width: 200px; margin-top: 20px; display: none; }
+        #yesBtn { background-color: #9c27b0; color: white; left: 0; transition: 0.3s; }
+        #yesBtn:hover { transform: scale(1.1); background-color: #7b1fa2; }
+        #noBtn { background-color: #555; color: white; right: 0; transition: 0.1s; }
+        .success-content { display: none; }
+        .success-msg { color: #6a1b9a; font-size: 26px; font-weight: bold; margin-bottom: 20px; }
+        .kurumi-gif { width: 250px; border-radius: 20px; }
     </style>
 </head>
 <body>
 
     <div id="content">
-        <h1>Abi, will you buy me Ulta and Ross after the snowstorm is over? ✨</h1>
+        <h1>Ubi, will you buy me make up and skincare in Ulta and Ross after the snowstorm? ✨🛍️</h1>
         <div class="buttons">
             <button id="yesBtn" onclick="showLove()">Yes!</button>
-            <button id="noBtn" onmouseover="moveButton()">No</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
         </div>
     </div>
 
-    <div id="success">
-        <div class="success-msg" id="successText">Yay! See
+    <div id="success" class="success-content">
+        <div class="success-msg">Thank you Ubi! 💖✨</div>
+        <img class="kurumi-gif" src="https://media.tenor.com/On7VbaS1CDQAAAAi/kuromi-dance.gif" alt="Kuromi Dancing">
+    </div>
+
+    <script>
+        // Fungsi membuat tombol No lari
+        function moveButton() {
+            const x = Math.random() * (window.innerWidth - 150);
+            const y = Math.random() * (window.innerHeight - 100);
+            const noBtn = document.getElementById('noBtn');
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+
+        // Fungsi setelah klik Yes
+        function showLove() {
+            document.getElementById('content').style.display = 'none';
+            document.getElementById('success').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
