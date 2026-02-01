@@ -11,13 +11,13 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f3e5f5; /* Warna ungu muda Kuromi */
+            background-color: #f3e5f5;
             font-family: 'Arial', sans-serif;
             overflow: hidden;
             text-align: center;
             padding: 20px;
         }
-        h1 { color: #6a1b9a; margin-bottom: 30px; line-height: 1.4; }
+        h1 { color: #6a1b9a; margin-bottom: 30px; line-height: 1.4; font-size: 22px; }
         .buttons { position: relative; width: 100%; max-width: 300px; height: 100px; margin: 0 auto; }
         button {
             padding: 15px 30px;
@@ -32,8 +32,8 @@
         #yesBtn { background-color: #9c27b0; color: white; left: 0; transition: 0.3s; }
         #noBtn { background-color: #555; color: white; right: 0; transition: 0.1s; }
         .success-content { display: none; }
-        .success-msg { color: #6a1b9a; font-size: 26px; font-weight: bold; margin-bottom: 20px; }
-        .kurumi-gif { width: 250px; border-radius: 20px; display: none; }
+        .success-msg { color: #6a1b9a; font-size: 28px; font-weight: bold; margin-bottom: 20px; }
+        .kurumi-gif { width: 250px; border-radius: 20px; }
     </style>
 </head>
 <body>
@@ -48,7 +48,7 @@
 
     <div id="success" class="success-content">
         <div class="success-msg">Thank you Ubi! 💖✨</div>
-        <img id="kurumiGif" class="kurumi-gif" src="https://media.tenor.com/On7VbaS1CDQAAAAi/kuromi-dance.gif" alt="Kuromi Dancing">
+        <img class="kurumi-gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZueXp3bm9ueXp3bm9ueXp3bm9ueXp3JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/v7Y8tOn93y32C7uC2O/giphy.gif" alt="Kuromi Dancing">
     </div>
 
     <script>
@@ -64,7 +64,6 @@
         function showLove() {
             document.getElementById('content').style.display = 'none';
             document.getElementById('success').style.display = 'block';
-            document.getElementById('kurumiGif').style.display = 'inline-block';
         }
     </script>
 </body>
