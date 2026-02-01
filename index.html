@@ -11,7 +11,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f3e5f5; /* Ungu muda Kuromi */
+            background-color: #f3e5f5; /* Warna ungu muda lembut */
             font-family: 'Arial', sans-serif;
             overflow: hidden;
             text-align: center;
@@ -33,7 +33,7 @@
         #noBtn { background-color: #555; color: white; right: 0; transition: 0.1s; }
         .success-content { display: none; }
         .success-msg { color: #6a1b9a; font-size: 28px; font-weight: bold; margin-bottom: 20px; }
-        .kurumi-gif { width: 250px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .love-img { width: 280px; border-radius: 20px; }
     </style>
 </head>
 <body>
@@ -47,11 +47,12 @@
     </div>
 
     <div id="success" class="success-content">
-        <div class="success-msg">Thank you Ubi! 💖✨</div>
-        <img class="kurumi-gif" src="https://media.tenor.com/On7VbaS1CDQAAAAi/kuromi-dance.gif" alt="Kuromi Dancing">
+        <div class="success-msg">Thank you Ubi! ❤️🌸</div>
+        <img class="love-img" src="https://i.pinimg.com/736x/01/2b/96/012b963e6e84988e89f893e3e0e7168b.jpg" alt="Love Character Illustration">
     </div>
 
     <script>
+        // Fungsi membuat tombol No lari-lari
         function moveButton() {
             const x = Math.random() * (window.innerWidth - 150);
             const y = Math.random() * (window.innerHeight - 100);
@@ -61,6 +62,7 @@
             noBtn.style.top = y + 'px';
         }
 
+        // Fungsi menampilkan pesan sukses dan gambar
         function showLove() {
             document.getElementById('content').style.display = 'none';
             document.getElementById('success').style.display = 'block';
